@@ -1,3 +1,4 @@
+// Question 3
 function createLibraryManager() {
   const books = new Map();
   return {

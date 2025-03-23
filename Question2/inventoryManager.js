@@ -1,3 +1,4 @@
+// Question 2 
 const createInventoryManager=()=>{
     let products=[];
     return{
