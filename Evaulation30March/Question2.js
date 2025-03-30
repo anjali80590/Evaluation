@@ -11,7 +11,7 @@ function createFunctionRegistry() {
     },
     executeFunction(name, args = [], context = null) {
       if (!registry[name]) {
-        throw new Error("function  not");
+        throw new Error("function  not registered");
       }
       return registry[name].apply(context, args);
     },
