@@ -1,28 +1,46 @@
+function LibraryItem(title, author) {
+  this.title = title;
+  this.author = author;
+  this.checkedOutBy = null;
+}
 
-// Question 2 
+LibraryItem.checkedOutItems = [];
 
-// // Creating new library items
-// const book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 180, "Fiction", "9780743273565");
-// const dvd1 = new DVD("Inception", "Christopher Nolan", 148, "Science Fiction", "PG-13");
-// const magazine1 = new Magazine("National Geographic", "Various", 80, "Science", "April 2023", "Monthly");
+LibraryItem.prototype.checkOut = function (userId) {
+  this.checkedOutBy = userId;
+  LibraryItem.checkedOutItems.push(this);
+  console.log(`${this.title} has been checked out by ${userId}`);
+};
 
-// // Check out and return operations
-// book1.checkOut("User123");
-// book1.returnItem();
-// book1.checkOut("User456");
+LibraryItem.prototype.returnItem = function () {
+  this.checkedOutBy = null;
+  LibraryItem.checkedOutItems = LibraryItem.checkedOutItems.filter(
+    (item) => item !== this
+  );
+};
 
-// // Get all checked out items
-// const checkedOutItems = LibraryItem.getCheckedOutItems();
+LibraryItem.getCheckedOutItems = function () {
+  return LibraryItem.checkedOutItems.map((item) => ({
+    title: item.title,
+    author: item.author,
+    checkedOutBy: item.checkedOutBy,
+  }));
+};
 
-// Expected Output:
+function Book(title, author) {
+  LibraryItem.call(this, title, author);
+  this.type = "Book";
+}
+Book.prototype = Object.create(LibraryItem.prototype);
 
-// [Book] The Great Gatsby has been checked out by User456
-// Current status: checked out
-// All checked out items: [
-//   {
-//     title: "The Great Gatsby",
-//     author: "F. Scott Fitzgerald",
-//     type: "Book",
-//     checkedOutBy: "User456"
-//   }
-// ]
+const book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald");
+
+book1.checkOut("User123");
+book1.returnItem();
+book1.checkOut("User456");
+
+console.log(
+  "Current status:",
+  book1.checkedOutBy ? "checked out" : "available"
+);
+console.log("All checked out items:", LibraryItem.getCheckedOutItems());
