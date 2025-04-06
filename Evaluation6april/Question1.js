@@ -12,7 +12,7 @@ function getTotal(cart) {
 function applyCategoryDiscount(cart) {
   return cart.map((item) => {
     if (item.category === "Electronics") {
-      item.price *= 0.9; // 10% off
+      item.price *= 0.9; 
     }
     return item;
   });
