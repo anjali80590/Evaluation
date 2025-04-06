@@ -5,38 +5,41 @@ const cart = [
   { name: "Headphones", price: 49.99, quantity: 1, category: "Electronics" },
 ];
 
-function getTotal(cart) {
-  return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-}
+const originalTotal = cart.reduce(
+  (sum, item) => sum + item.price * item.quantity,
+  0
+);
 
-function applyCategoryDiscount(cart) {
-  return cart.map((item) => {
-    if (item.category === "Electronics") {
-      item.price *= 0.9; 
-    }
-    return item;
-  });
-}
+s
+const withElectronicsDiscount = cart.map((item) => {
+  if (item.category === "Electronics") {
+    return { ...item, price: item.price * 0.9 };
+  }
+  return item;
+});
 
-function applyBuy2Get1Free(cart) {
-  return cart.map((item) => {
-    if (item.category === "Books" && item.quantity >= 3) {
-      const freeItems = Math.floor(item.quantity / 3);
-      item.quantity -= freeItems;
-    }
-    return item;
-  });
-}
 
-function applyCartDiscount(total) {
-  return total > 1000 ? total * 0.95 : total; 
-}
+const withBookDiscount = withElectronicsDiscount.map((item) => {
+  if (item.category === "Books") {
+    const freeItems = Math.floor(item.quantity / 3);
+    return { ...item, quantity: item.quantity - freeItems };
+  }
+  return item;
+});
 
-const originalTotal = getTotal(cart);
-const afterCategory = getTotal(applyCategoryDiscount([...cart]));
-const afterBooks = getTotal(applyBuy2Get1Free([...cart]));
-const finalTotal = applyCartDiscount(afterCategory);
+
+const afterCategoryDiscounts = withBookDiscount.reduce(
+  (sum, item) => sum + item.price * item.quantity,
+  0
+);
+
+
+const finalTotal =
+  afterCategoryDiscounts > 1000
+    ? afterCategoryDiscounts * 0.95
+    : afterCategoryDiscounts;
+
 
 console.log("Original cart total: $" + originalTotal.toFixed(2));
-console.log("After category discounts: $" + afterCategory.toFixed(2));
+console.log("After category discounts: $" + afterCategoryDiscounts.toFixed(2));
 console.log("Final total after all discounts: $" + finalTotal.toFixed(2));
