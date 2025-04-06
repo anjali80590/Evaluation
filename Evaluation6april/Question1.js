@@ -10,7 +10,7 @@ const originalTotal = cart.reduce(
   0
 );
 
-s
+
 const withElectronicsDiscount = cart.map((item) => {
   if (item.category === "Electronics") {
     return { ...item, price: item.price * 0.9 };
@@ -43,3 +43,5 @@ const finalTotal =
 console.log("Original cart total: $" + originalTotal.toFixed(2));
 console.log("After category discounts: $" + afterCategoryDiscounts.toFixed(2));
 console.log("Final total after all discounts: $" + finalTotal.toFixed(2));
+
+
