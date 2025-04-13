@@ -1,73 +1,131 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Learn how the internet works: Client & Server, Web Communication, and more.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Server</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
+
 <body>
     <header>
-        <h1>About Client Server communication</h1>
+        <h1>About Client-Server Communication</h1>
         <nav>
             <a href="#basic">Basics</a>
             <a href="#quiz">Quiz</a>
             <a href="#about">About</a>
         </nav>
     </header>
- <main>
-    <section id="basic">
-  <h2>Client and Server Communication</h2>
-  <p>In web Development client is used to request to the server for services and server used to provide information to client</p>
-    </section>
-    <hr>
-   <article>
-    <h2>The Jounery of Web Request</h2>
-    <p>when you enter url in browser</p>
-    <ol>
-        <li>Browser sends a Https request</li>
-        <li>Server sends back a http response</li>
-        <li>Browser render content in html</li>
-    </ol>
-    <map name=""></map>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/17jxwdJ_9LI?si=Nm941IVcFNyWjytV"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-   </article>
-   <hr>
-   <aside>
-    <h2>Quick Facts</h2>
-    <p>Did you know? The first web server was created by Tim Berners-Lee</p>
-   </aside>
-   
-   <section id="quiz">
-    <h3>what is Client</h3>
-    <form>
-    <input type="radio" name="" id="">Browser
-    <input type="radio" name="" id="">server
-    <input type="radio" name="" id="">notepad
-    <input type="radio" name="" id="">None of these
-    </form>
-    <h2>Test Your Knowledge</h2>
-    <form id="form" action="">
-        <h3>What is client in web communication</h3>
-        <label for="">Web Browser</label>
-        <input type="text" value="web brwoser"> <br>
-        <label for="">Web Server</label>
-        <input type="text" value="web server"> <br>
-        <label for="">DataBase</label>
-        <input type="text" value="database"><br>
-        <label for="">Your Feedback</label><br>
-        <textarea name="feedback" id="feedback"></textarea> <br>
-        <button>Submit</button>
-    </form>
-   </section>
- </main>
 
- <footer>
-    <p>Created By Anjali </p>
-    <p>Learn more at <a href="https://developer.mozilla.org/en-US/">Mdn Docs</a></p>
- </footer>
+    <main>
+        <section id="basic">
+            <h2>Client and Server Communication</h2>
+            <p>In <b>web development</b>, the <i>client</i> (usually a browser) sends requests to the <u>server</u> for
+                information or services. The server processes these requests and responds with the appropriate data,
+                often in the form of <sup>HTML</sup> or <sub>JSON</sub>.</p>
+        </section>
+
+        <hr>
+
+        <article>
+            <h2>The Journey of a Web Request</h2>
+            <p>When you type a URL in your browser:</p>
+            <ol>
+                <li>The browser sends an HTTP/HTTPS request.</li>
+                <li>The server receives and processes the request.</li>
+                <li>The server sends back a response (usually HTML, CSS, JS).</li>
+                <li>The browser renders the content on the screen.</li>
+            </ol>
+
+            <ul>
+                <li>HTTP</li>
+                <li>DNS</li>
+                <li>TCP/IP</li>
+            </ul>
+
+            <table>
+                <caption><b>Client vs Server</b></caption>
+                <tr>
+                    <th>Function</th>
+                    <th>Client</th>
+                    <th>Server</th>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td>Requests data</td>
+                    <td>Provides data</td>
+                </tr>
+            </table>
+
+            <table>
+                <caption><b>Static vs Dynamic Websites</b></caption>
+                <tr>
+                    <th>Feature</th>
+                    <th>Static</th>
+                    <th>Dynamic</th>
+                </tr>
+                <tr>
+                    <td>Content</td>
+                    <td>Fixed</td>
+                    <td>Changes based on user interaction</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/17jxwdJ_9LI?si=Nm941IVcFNyWjytV"
+                title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        </article>
+
+        <hr>
+
+        <aside>
+            <h2>Quick Facts</h2>
+            <p><b>Did you know?</b> The first web server was created by <i>Tim Berners-Lee</i>.</p>
+            <p>Data centers power the internet from various locations:</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019261644647!2d-122.08424968468141!3d37.422065979824376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb0fae72d14a7%3A0x17f93f6106c81641!2sGoogleplex!5e0!3m2!1sen!2sin!4v1617802727333!5m2!1sen!2sin"
+                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </aside>
+
+        <section id="quiz">
+            <h2>Quick Quiz</h2>
+            <form>
+                <p><b>1. What is a client?</b></p>
+                <input type="radio" name="client" id="a1"> Browser<br>
+                <input type="radio" name="client" id="a2"> Server<br>
+                <input type="radio" name="client" id="a3"> Notepad<br>
+                <input type="radio" name="client" id="a4"> None of these<br><br>
+            </form>
+
+            <h2>Test Your Knowledge</h2>
+            <form id="form" action="#">
+                <label>What is a client in web communication?</label>
+                <input type="text" placeholder="e.g. Web Browser"><br>
+
+                <label>What is a server?</label>
+                <input type="text" placeholder="e.g. Delivers data"><br>
+
+                <label>What is a Database?</label>
+                <input type="text" placeholder="e.g. Stores information"><br>
+
+                <label>Your Feedback</label><br>
+                <textarea name="feedback" id="feedback" placeholder="Write your feedback here..."></textarea><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="about">
+        <p>Created by Anjali Yadav</p>
+        <p>Learn more at <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Docs</a></p>
+    </footer>
 </body>
+
 </html>

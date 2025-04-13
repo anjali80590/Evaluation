@@ -1,94 +1,62 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    /* background-color: black;
-    color: white; */
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-}
-header{
-    padding: 30px;
-    text-align: center;
-    background-color: rgb(99, 99, 243);
-    background-image: linear-gradient(blue);
-    color: white;
-}
-#basic h2{
-    text-align: center;
-    color: purple;
-}
+ body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #103379);
+            margin: 0;
+            padding: 0;
+        }
 
-aside h2{
-    text-align: center;
-    color: purple;
-}
-#quiz h2{
-    text-align: center;
-    color: purple;
-}
-article h2{
-    text-align: center;
-    color: purple;
-}
-nav{
-    text-align: center;
-    margin-top: 10px;
-}
-nav a{
-    text-decoration: none;
-    color:black;
-    font-size: 17px;
-    font-weight: bold;
-    margin: 0 20px;
-    
-}
-nav a:hover{
-    color: white;
-}
-nav a:focus{
-    color: blue;
-}
-section , article,aside{
-    margin: 30px 0;
-}
-a{
-    text-decoration: none;
-    color: rgb(232, 8, 46);
-}
-input[type="radio"]{
-    margin: 10px 10px;
-}
-footer{
-    position: relative;
-    bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.859);
-    color: white;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-}
-ol{
-    text-align: center;
-}
+        header,
+        footer {
+            background-color: #0c0c0c;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
 
-ol li{
-    list-style-type: disc;
-}
-#form{
-    margin: auto;
-    margin-top: 20px;
-    background-color: rgb(104, 104, 237);
-    width: 300px;
-    padding: 10px;
-}
-form h3{
-    margin-bottom: 20px;
-    background-color: rgb(111, 111, 233);
-}
-button{
-    text-align: center;
-}
+        nav a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
 
+        main {
+            padding: 1rem;
+        }
+
+        section,
+        article,
+        aside {
+            background-color: white;
+            margin: 1rem auto;
+            padding: 1rem;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            margin-top: 10px;
+        }
+
+        form input[type="text"],
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        form button {
+            padding: 5px 10px;
+            background-color: #1a4cb0;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #434b4a;
+        }
