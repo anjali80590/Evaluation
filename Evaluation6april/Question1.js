@@ -45,3 +45,4 @@ console.log("After category discounts: $" + afterCategoryDiscounts.toFixed(2));
 console.log("Final total after all discounts: $" + finalTotal.toFixed(2));
 
 
+

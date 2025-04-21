@@ -1,67 +1,67 @@
- body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #e0f7fa, #103379);
-            margin: 0;
-            padding: 0;
-        }
-        a:hover{
-            color: blue;
-        }
-#footer{
-    text-align: none;
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #103379);
+  margin: 0;
+  padding: 0;
 }
-        header,
-        footer {
-            background-color: #0c0c0c;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
+a:hover {
+  color: blue;
+}
+#footer {
+  text-align: none;
+}
+header,
+footer {
+  background-color: #0c0c0c;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
 
-        nav a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-        }
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
 
-        main {
-            padding: 1rem;
-        }
+main {
+  padding: 1rem;
+}
 
-        section,
-        article,
-        aside {
-            background-color: white;
-            margin: 1rem auto;
-            padding: 1rem;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+section,
+article,
+aside {
+  background-color: white;
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 8px;
-            margin-top: 10px;
-        }
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 8px;
+  margin-top: 10px;
+}
 
-        form input[type="text"],
-        textarea {
-            width: 100%;
-            margin-bottom: 10px;
-        }
+form input[type="text"],
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
 
-        form button {
-            padding: 5px 10px;
-            background-color: #1a4cb0;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+form button {
+  padding: 5px 10px;
+  background-color: #1a4cb0;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
-        form button:hover {
-            background-color: #434b4a;
-        }
+form button:hover {
+  background-color: #434b4a;
+}
