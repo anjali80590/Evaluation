@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing Web Application</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+      <header>
+        <h1>Recipe Sharing</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="home-link">Home</a></li>
+                <li><a href="#" id="add-recipe-link">Add Recipe</a></li>
+                <li><a href="#" id="view-recipe-link">View Recipe</a></li>
+                <li><a href="#" id="theme-toggle">Dark Mode</a></li>
+            </ul>
+        </nav> 
+      </header>
+      <main>
+      <section id="home-section" class="active">
+        <h2>Welcome to Recipe Sharing</h2>
+        <p>Add Your Favoutire recipe</p>
+      </section>
+      <section id="add-recipe-section">
+        <h2>Add New Recipe</h2>
+        <form action="" id="recipe-form">
+            <div class="form-group">
+                <label for="recipe-name">Recipe Name</label>
+                <input type="text" id="recipe-name" required>
+            </div>
+            <div id="form-group">
+                <label for="recipe-category">Category</label>
+                <select name="" id="recipe-category" required>
+                    <option value="">Select Category</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Dirnks">Drinks</option>
+                </select>
+            </div>
+            <div id="form-group">
+                <label for="recipe-ingredients">Ingredients</label>
+                <textarea id="recipe-ingredients" required></textarea>
+
+            </div>
+            <!-- <div class="" id="form-group">
+                <label for="recipe-steps">Prepeation Steps</label>
+                <textarea name="" id="recipe-steps"></textarea>
+      
+            </div> -->
+            <button id="submit-recipe">Add Recipe</button>
+        </form>
+      </section>
+
+
+      <section id="view-recipes-section">
+        <h2>Browse Recipes</h2>
+        <div id="filter-controls">
+            <label for="category-filter">Filter By Category</label>
+            <select name="" id="category-filter">
+                <option value="all">All Cateogries</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Desserts">Desserts</option>
+                <option value="Drinks" id="Drinks"></option>
+            </select>
+        </div>
+
+        <div id="recipe-Container"></div>
+      </section>
+
+  
+      </div>
+
+
+</main>
+      <footer>
+        <p>Recipe Sharing App</p>
+      </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
