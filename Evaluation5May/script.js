@@ -28,10 +28,27 @@ navLinks.forEach((link) => {
     document.getElementById(sectionId).style.display = "block";
   });
 });
-darkModeToggle.addeventListener("click", () => {
-  document.body.classList.toogle("dark-mode");
-  localStorage.setItem(
-    "darkMode",
-    document.body.classList.contains("dark-mode")
-  );
-});
+
+
+document.getElementById('dark-mode-toggle').addEventListener('click',()=>{
+  document.body.classList.toggle("dark-mode");
+    localStorage.setItem(
+      "darkMode",
+      document.body.classList.contains("dark-mode")
+    );
+    if(localStorage.getItem('darkMode')=="true"){
+      document.body.classList.add('dark-Mode');
+    }
+  }
+)
+
+editProfileBtn.addeventListener('click',()=>{
+    profileDisplay.style.display='none';
+    profileEdit.style.display='block';
+})
+if(currentProfile){
+    document.getElementById('name').value=currentProfile.name||' '
+    document.getElementById('age').value=currentProfile.age||' ';
+    document.getElementById('email').value=currentProfile.email||' ';
+    document.getElementById('course').value=currentProfile.course||' '
+}

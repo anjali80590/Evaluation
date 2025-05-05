@@ -1,131 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="style.css">
+
 <body>
     <header>
-    <nav id="navLinks">
-       <ul id="ul">
-        <li><a class="nav-links" href="">Home</a></li>
-        <li><a class="nav-links" href="">Profile</a></li>
-        <li><a class="nav-links" href="">Settings</a></li>
-       </ul>
-    </nav>
-    <button id="dark-mode-toggle">Dark Mode</button>
+        <nav id="navLinks">
+            <ul id="ul">
+                <li><a class="nav-links" href="">Home</a></li>
+                <li><a class="nav-links" href="">Profile</a></li>
+                <li><a class="nav-links" href="">Settings</a></li>
+            </ul>
+        </nav>
+        <button id="dark-mode-toggle">Dark Mode</button>
     </header>
 
-    <main>  
+    <main>
         <section id="homeSection" class="content-section">
-                <h1>Welcome to Student Dashboard</h1>
-                <p>Manage You Profile Information</p>
+            <h1>Welcome to Student Dashboard</h1>
+            <p>Manage You Profile Information</p>
         </section>
-  
 
-    <section id="profileSection" class="content-sectioin">
-        <article id="profileDisplay">
-  <h2>student Profile</h2>
-  <div id="profileInfo">
-    <p>Name:</p>
-    <p>Age:</p>
-    <p>Email:</p>
-    <p>Course:</p>
-    <p>Gender:</p>
-    <p>Skills:</p>
-  </div>
-  <button id="editProfile">Edit Profile</button>
-  <button id="loadData">Load Data </button>
- 
-  <div id="studentTableContainer">
-    <h3>All Students</h3>
-    <input type="text" id="seachuser">
-    <button id="sort">Search By Name</button>
-    <table id="studentTable">
-        <thead>
-            <tr>
-                <td>Name</td>
-                <td>Age</td>
-                <td>Email</td>
-                <td>Course</td>
-            </tr>
-        </thead>
-        <tbody id="studentTableBody"></tbody>
-    </table>
-  </div>
-        </article>
-  
 
-    <article id="profileEdit" style="display:none;">
-        <h2>Edit Profile</h2>
-        <form action="" id="profileForm">
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name"required>
-            </div>
-            <div>
-                <label for="age">Age:</label>
-                <input type="text" id="age" name="age" required>
-            </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="course">Course</label>
-                <select name="course" id="course">
-                    <option value="">All</option>
-                    <option value="Computer Science">Computer Science</option>
-                    <option value="Engineering">Engineering</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Physics">Physics</option>
-                </select>
-            </div>
-            <div>
-               <label>Gender:</label>
-               <div>
-                <input type="radio" name="gender" id="male">
-                <label for="male">Male</label>
-               </div>
-               <div>
-                <input type="radio" name="gender" id="female">
-                <label for="female">Female</label>
-               </div>
-               <div>
-                <input type="radio" name="gender" id="other">
-                <label for="other">Other</label>
-               </div>
-            </div>
-            <div>
-              <Label>Skills:</Label>
-              <div>
-                <input type="checkbox" name="skills" id="javascript" value="javascript">
-                <label for="javascript">javascript</label>
+        <section id="profileSection" class="content-sectioin">
+            <article id="profileDisplay">
+                <h2>student Profile</h2>
+                <div id="profileInfo">
+                    <p>Name:</p>
+                    <p>Age:</p>
+                    <p>Email:</p>
+                    <p>Course:</p>
+                    <p>Gender:</p>
+                    <p>Skills:</p>
+                </div>
+                <button id="editProfile">Edit Profile</button>
+                <button id="loadData">Load Data </button>
 
-              </div>
-              <div>
-                <input type="checkbox" name="skills" id="python" value="python">
-                <label for="python">python</label>
-              </div>
-             <input type="checkbox" name="skills" id="java">
-             <label for="java">java</label>
-            </div>
-            <button type="submit">Save Profile</button>
-            <button id="cancelBtn">Cancel</button>
-        </form>
+                <div id="studentTableContainer">
+                    <h3>All Students</h3>
+                    <input type="text" id="seachuser">
+                    <button id="sort">Search By Name</button>
+                    <table id="studentTable">
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Age</td>
+                                <td>Email</td>
+                                <td>Course</td>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTableBody"></tbody>
+                    </table>
+                </div>
+            </article>
 
-    </article>
-    </section>
-    <section id="settingsSection">
-        <h2>Settings</h2>
-        <p>Dashboard Settings will be Displayed Here</p>
-    </section>
+
+            <article id="profileEdit" style="display:none;">
+                <h2>Edit Profile</h2>
+                <form action="" id="profileForm">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="age">Age:</label>
+                        <input type="text" id="age" name="age" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="course">Course</label>
+                        <select name="course" id="course">
+                            <option value="">All</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Physics">Physics</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Gender:</label>
+                        <div>
+                            <input type="radio" name="gender" id="male">
+                            <label for="male">Male</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" id="female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" id="other">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                    <div>
+                        <Label>Skills:</Label>
+                        <div>
+                            <input type="checkbox" name="skills" id="javascript" value="javascript">
+                            <label for="javascript">javascript</label>
+
+                        </div>
+                        <div>
+                            <input type="checkbox" name="skills" id="python" value="python">
+                            <label for="python">python</label>
+                        </div>
+                        <input type="checkbox" name="skills" id="java">
+                        <label for="java">java</label>
+                    </div>
+                    <button type="submit">Save Profile</button>
+                    <button id="cancelBtn">Cancel</button>
+                </form>
+
+            </article>
+        </section>
+        <section id="settingsSection">
+            <h2>Settings</h2>
+            <p>Dashboard Settings will be Displayed Here</p>
+        </section>
     </main>
     <footer>
-      <p>2025 Student Profil</p>
+        <p>2025 Student Profile</p>
     </footer>
 </body>
 <script src="script.js"></script>
+
 </html>
