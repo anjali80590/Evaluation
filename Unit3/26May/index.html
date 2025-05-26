@@ -1,67 +1,55 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <title>Student Manager</title>
+ <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Student Manager Dashboard</h1>
-    <div class="controls">
-        <input type="text" id="search" placeholder="search by name or grade">
-        <select name="" id="filter-grade">
+    <div class="form-section">
+        <h2>Add / Update Student</h2>
+        <input type="text" id="name" placeholder="Name" />
+        <input type="number" id="age" placeholder="Age" />
+        <input type="text" id="grade" placeholder="Grade" />
+        <input type="text" id="section" placeholder="Section" />
+        <input type="number" id="score" placeholder="Score" />
+        <button onclick="createOrUpdateStudent()">Save</button>
+    </div>
+
+    <div class="form-section">
+        <h2>Filter/Sort</h2>
+        <input type="text" id="search" placeholder="Search by name or grade" />
+        <select id="grade-filter">
             <option value="">All Grades</option>
-            <option value="9th">9th</option>
             <option value="10th">10th</option>
             <option value="11th">11th</option>
             <option value="12th">12th</option>
         </select>
-        <select name="" id="filter-section">
+        <select id="section-filter">
             <option value="">All Sections</option>
             <option value="A">A</option>
             <option value="B">B</option>
             <option value="C">C</option>
-            <option value="D">D</option>
         </select>
-        <select name="" id="sort-by">
-            <option value="">Sort By</option>
-            <option value="name-asc">Name A-Z</option>
-            <option value="name-desc">Name Z-A</option>
+        <select id="sort-order">
+            <option value="">Default</option>
+            <option value="name-asc">Name Asc</option>
+            <option value="name-desc">Name Desc</option>
             <option value="score-asc">Score Asc</option>
             <option value="score-desc">Score Desc</option>
         </select>
+        <button onclick="renderStudents()">Apply</button>
     </div>
-    <div id="student-form-container">
-        <form action="" id="student-form">
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="text" id="age" placeholder="Age" required>
-            <select name="" id="grade">
-                <option value="">All Grades</option>
-                <option value="9th">9th</option>
-                <option value="10th">10th</option>
-                <option value="11th">11th</option>
-                <option value="12th">12th</option>
-            </select>
-            <select name="" id="section">
-                <option value="">All Sections</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-            </select>
-            <input type="text" id="score" required placeholder="Score">
-            <button type="submit">Submit</button>
-            <button type="reset" id="reset">Cancel</button>
-        </form>
-    </div>
-    <div id="students-container"></div>
-    <div id="pagination"></div>
 
+    <div class="student-section">
+        <h2>Student List</h2>
+        <div id="students"></div>
     </div>
+  
 </body>
 <script src="script.js"></script>
-
 </html>
