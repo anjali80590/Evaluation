@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+  color: #2c53e3;
+}
+.controls,
+#student-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.controls select,
+.controls input,
+#studnt-form-input,
+#student-form-select {
+  padding: 8px;
+  font-size: 14px;
+}
+#student-form-container {
+  margin-bottom: 20px;
+}
+.student-card {
+  background: white;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.student-card button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+button[disabled] {
+  background: #ccc;
+  cursor: default;
+}

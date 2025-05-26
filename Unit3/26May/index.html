@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Student Manager Dashboard</h1>
+    <div class="controls">
+        <input type="text" id="search" placeholder="search by name or grade">
+        <select name="" id="filter-grade">
+            <option value="">All Grades</option>
+            <option value="9th">9th</option>
+            <option value="10th">10th</option>
+            <option value="11th">11th</option>
+            <option value="12th">12th</option>
+        </select>
+        <select name="" id="filter-section">
+            <option value="">All Sections</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+        </select>
+        <select name="" id="sort-by">
+            <option value="">Sort By</option>
+            <option value="name-asc">Name A-Z</option>
+            <option value="name-desc">Name Z-A</option>
+            <option value="score-asc">Score Asc</option>
+            <option value="score-desc">Score Desc</option>
+        </select>
+    </div>
+    <div id="student-form-container">
+        <form action="" id="student-form">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="age" placeholder="Age" required>
+            <select name="" id="grade">
+                <option value="">All Grades</option>
+                <option value="9th">9th</option>
+                <option value="10th">10th</option>
+                <option value="11th">11th</option>
+                <option value="12th">12th</option>
+            </select>
+            <select name="" id="section">
+                <option value="">All Sections</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+            <input type="text" id="score" required placeholder="Score">
+            <button type="submit">Submit</button>
+            <button type="reset" id="reset">Cancel</button>
+        </form>
+    </div>
+    <div id="students-container"></div>
+    <div id="pagination"></div>
+
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
