@@ -27,6 +27,13 @@
       "grade": "10th",
       "score": 91,
       "section": "C"
+    },
+    "stu005":{
+      "name":"neha",
+      "age":17,
+      "grade":"11th",
+      "score":81,
+      "section":"D"
     }
   }
 }

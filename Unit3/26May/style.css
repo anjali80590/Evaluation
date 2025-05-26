@@ -6,9 +6,10 @@ h1 {
 #student-form {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 11px;
   margin-bottom: 20px;
   justify-content: center;
+
 }
 .controls select,
 .controls input,
@@ -19,6 +20,7 @@ h1 {
 }
 #student-form-container {
   margin-bottom: 20px;
+  margin-top: 0px;
 }
 .student-card {
   background: white;
