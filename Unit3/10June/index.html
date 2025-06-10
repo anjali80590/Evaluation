@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty Explorer</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <h1>Ricky and Morty Explorer</h1>
+    <div id="controls">
+        <input type="text" id="search" placeholder="search by Name">
+        <select name="" id="status">
+            <option value="">All Status</option>
+            <option value="alive">Alive</option>
+            <option value="dead">Dead</option>
+            <option value="unknown">Unknown</option>
+        </select>
+        <select name="" id="species">
+            <option value="">All Species</option>
+            <option value="human">Human</option>
+            <option value="alien">Alien</option>
+            <option value="robot">Robot</option>
+        </select>
+    </div>
+    <div id="characterContainer"></div>
+    <div class="pagination">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+    <div id="modal" class="hidden">
+        <div class="modelContent">
+            <span id="close"></span>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,58 @@
+h1 {
+    text-align: center;
+    color: blue;
+    text-transform: capitalize;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+#controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#characterContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.modalContainer {
+    background-color: white;
+    padding: 20px;
+    margin: 10% auto;
+    width: 80%;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}
+.green{
+    background-color: green;
+}
