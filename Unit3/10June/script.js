@@ -44,11 +44,19 @@ function renderCards(characters) {
         <h3>${char.name}</h3>
         <p>${char.species}</p>
         <p>${char.status}</p>
+        <span class="status-badge" style="background-Color:${getStatusColor(
+          char.status
+        )}">${char.status}</span>
          <p>${char.location.name}</p>
         `;
     card.addEventListener("click", () => showModal(char));
     container.appendChild(card);
   });
+  function getStatusColor(status) {
+    if (status === "Alive") return "green";
+    if (status == "Dead") return "red";
+    return "grey";
+  }
 }
 // showingModal
 function showModal(char) {
@@ -59,13 +67,13 @@ function showModal(char) {
      <p> Species :${char.species}</p>
         <p>Origin ${char.origin.name}</p>
         <p>Location ${char.location.name}</p>
-        <p>Episode Count : ${char.episode.length}</p>
-        <button className="closeModal">Close Modal</button>
+        <p>Episode Count : ${char.episode.length} ${char.episode.length>30? "<span> &#x1F31F; </span>":" "}</p>
+        
     `;
 }
-// closeModal.onclick = () => {
-//   modal.classList.add("hidden");
-// };
+closeModal.onclick = () => {
+  modal.classList.add("hidden");
+};
 
 prevBtn.onclick = () => {
   currentPage--;
