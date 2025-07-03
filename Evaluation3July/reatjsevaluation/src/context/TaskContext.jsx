@@ -1,30 +1,54 @@
-import React, { createContext, useEffect, useState } from 'react'
-export let TaskContext=createContext();
-function TaskProvider({children}) {
-  let[tasks,setTasks]=useState([]);
-  useEffect(()=>{
-    let fetchData=()=>{
-      let initialTasks=[
-        {id:1,title:'task1',description:'description 1',completed:true},
-        {id:2,title:'task2',description:'description 2',completed:true}
-      ]
-      setTasks(initialTasks);
-    }
-    fetchData();
-  },[])
-  let addTask=(task)=>{
-     setTasks(prev=>[...prev,{...task,id:Date.now(),completed:false}])
-  }
-  let toggleTask=(id)=>{
-    setTasks(prev=>prev.map(t=>(t.id===id?{...t,completed:!t.completed}:t)))
-  }
-  return (
-    <div>
-   <TaskContext.Provider value={{tasks,addTask,toggleTask}}>
-    {children}
-   </TaskContext.Provider>
-    </div>
-  )
-}
+export function TaskProvider({ children }) {
+  const [tasks, setTasks] = useState([]);
 
-export default TaskProvider;
+  useEffect(() => {
+    setTimeout(() => {
+      const initialTasks = [
+        {
+          id: 1,
+          title: "Learn React",
+          description: "Hooks lesson",
+          completed: false,
+        },
+        {
+          id: 2,
+          title: "Read Book",
+          description: "Chapter 5",
+          completed: true,
+        },
+      ];
+      setTasks(initialTasks);
+    }, 1500);
+  }, []);
+
+  const addTask = (task) => {
+    setTasks((prev) => [
+      ...prev,
+      { ...task, id: Date.now(), completed: false },
+    ]);
+  };
+
+  const toggleTask = (id) => {
+    setTasks((prev) =>
+      prev.map((t) => (t.id === id ? { ...t, completed: !t.completed } : t))
+    );
+  };
+
+  const deleteTask = (id) => {
+    setTasks((prev) => prev.filter((t) => t.id !== id));
+  };
+
+  const updateTask = (id, updated) => {
+    setTasks((prev) =>
+      prev.map((t) => (t.id === id ? { ...t, ...updated } : t))
+    );
+  };
+
+  return (
+    <TaskContext.Provider
+      value={{ tasks, addTask, toggleTask, deleteTask, updateTask }}
+    >
+      {children}
+    </TaskContext.Provider>
+  );
+}
