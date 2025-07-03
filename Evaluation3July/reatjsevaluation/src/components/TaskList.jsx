@@ -3,8 +3,8 @@ import { TaskContext } from "../context/TaskContext";
 
 function TaskList() {
   const { tasks, toggleTask, deleteTask, updateTask } = useContext(TaskContext);
-  const [filter, setFilter] = useState("all"); 
-  const [editingId, setEditingId] = useState(null);
+  const [filter, setFilter] = useState("all");
+  const [editId, setEditId] = useState(null);
   const [editTitle, setEditTitle] = useState("");
   const [editDesc, setEditDesc] = useState("");
 
@@ -17,14 +17,14 @@ function TaskList() {
   });
 
   const startEditing = (task) => {
-    setEditingId(task.id);
+    setEditId(task.id);
     setEditTitle(task.title);
     setEditDesc(task.description);
   };
 
   const saveEdit = (id) => {
     updateTask(id, { title: editTitle, description: editDesc });
-    setEditingId(null);
+    setEditId(null);
   };
 
   if (tasks.length === 0) {
@@ -34,10 +34,9 @@ function TaskList() {
   return (
     <div>
       <p>
-        {completed} of {tasks.length} tasks completed
+        {completed} of {tasks.length} tasks Completed
       </p>
 
-      {/* Filter buttons */}
       <div style={{ marginBottom: "10px" }}>
         <button onClick={() => setFilter("all")}>All</button>
         <button onClick={() => setFilter("completed")}>Completed</button>
@@ -52,7 +51,7 @@ function TaskList() {
             onChange={() => toggleTask(task.id)}
           />
 
-          {editingId === task.id ? (
+          {editId === task.id ? (
             <>
               <input
                 value={editTitle}
@@ -63,13 +62,13 @@ function TaskList() {
                 onChange={(e) => setEditDesc(e.target.value)}
               />
               <button onClick={() => saveEdit(task.id)}>Save</button>
-              <button onClick={() => setEditingId(null)}>Cancel</button>
+              <button onClick={() => setEditId(null)}>Cancel</button>
             </>
           ) : (
             <span
               style={{
-                textDecoration: task.completed ? "line-through" : "none",
                 marginLeft: "10px",
+                textDecoration: task.completed ? "line-through" : "none",
               }}
             >
               <strong>{task.title}</strong>{" "}

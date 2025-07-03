@@ -1,3 +1,7 @@
+import React, { createContext, useState, useEffect } from "react";
+
+export const TaskContext = createContext();
+
 export function TaskProvider({ children }) {
   const [tasks, setTasks] = useState([]);
 
@@ -30,17 +34,19 @@ export function TaskProvider({ children }) {
 
   const toggleTask = (id) => {
     setTasks((prev) =>
-      prev.map((t) => (t.id === id ? { ...t, completed: !t.completed } : t))
+      prev.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      )
     );
   };
 
   const deleteTask = (id) => {
-    setTasks((prev) => prev.filter((t) => t.id !== id));
+    setTasks((prev) => prev.filter((task) => task.id !== id));
   };
 
-  const updateTask = (id, updated) => {
+  const updateTask = (id, updatedTask) => {
     setTasks((prev) =>
-      prev.map((t) => (t.id === id ? { ...t, ...updated } : t))
+      prev.map((task) => (task.id === id ? { ...task, ...updatedTask } : task))
     );
   };
 
