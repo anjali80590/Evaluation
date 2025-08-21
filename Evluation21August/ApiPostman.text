@@ -1,0 +1,119 @@
+token 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTZkYWQwODBlMjVkNmMyZjA3Nzc0OCIsImlhdCI6MTc1NTc2NTUzMCwiZXhwIjoxNzU2MzcwMzMwfQ.5rw4-nBs2XXKcqcK5wkCeAfmVysY1tUxxpyvNi0L4fg
+
+
+/api/posts
+{
+    "title": "Post1",
+    "content": "this is the content of the first post 1 with atleast 20 characters",
+    "author": "68a6dad080e25d6c2f077748",
+    "tags": [
+        "68a6dc1a17b9ffba2a102a51",
+        "68a6dc1a17b9ffba2a102a53"
+    ],
+    "upvotes": [],
+    "_id": "68a6dc1a17b9ffba2a102a55",
+    "comments": [],
+    "createdAt": "2025-08-21T08:43:06.842Z",
+    "updatedAt": "2025-08-21T08:43:06.842Z",
+    "__v": 0
+}
+
+
+/posts/postId/comment
+{
+    "_id": "68a6dc1a17b9ffba2a102a55",
+    "title": "Post1",
+    "content": "this is the content of the first post 1 with atleast 20 characters",
+    "author": "68a6dad080e25d6c2f077748",
+    "tags": [
+        "68a6dc1a17b9ffba2a102a51",
+        "68a6dc1a17b9ffba2a102a53"
+    ],
+    "upvotes": [],
+    "comments": [
+        {
+            "user": "68a6dad080e25d6c2f077748",
+            "text": "Great Post",
+            "_id": "68a6dc8317b9ffba2a102a59",
+            "createdAt": "2025-08-21T08:44:51.293Z"
+        }
+    ],
+    "createdAt": "2025-08-21T08:43:06.842Z",
+    "updatedAt": "2025-08-21T08:44:51.297Z",
+    "__v": 1
+}
+
+
+postupvote 
+{
+    "message": "Post upvoted",
+    "totalUpvotes": 1
+}
+
+
+getpostbyId
+
+    "_id": "68a6dc1a17b9ffba2a102a55",
+    "title": "Post1",
+    "content": "this is the content of the first post 1 with atleast 20 characters",
+    "author": {
+        "_id": "68a6dad080e25d6c2f077748",
+        "username": "user1"
+    },
+    "tags": [
+        "68a6dc1a17b9ffba2a102a51",
+        "68a6dc1a17b9ffba2a102a53"
+    ],
+    "upvotes": [],
+    "comments": [
+        {
+            "user": {
+                "_id": "68a6dad080e25d6c2f077748",
+                "username": "user1"
+            },
+            "text": "Great Post",
+            "_id": "68a6dc8317b9ffba2a102a59",
+            "createdAt": "2025-08-21T08:44:51.293Z"
+        }
+    ],
+    "createdAt": "2025-08-21T08:43:06.842Z",
+    "updatedAt": "2025-08-21T08:48:36.931Z",
+    "__v": 3
+}
+
+getallposts 
+[
+    {
+        "_id": "68a6dc1a17b9ffba2a102a55",
+        "title": "Post1",
+        "content": "this is the content of the first post 1 with atleast 20 characters",
+        "author": {
+            "_id": "68a6dad080e25d6c2f077748",
+            "username": "user1"
+        },
+        "tags": [
+            {
+                "_id": "68a6dc1a17b9ffba2a102a51",
+                "name": "reactjs"
+            },
+            {
+                "_id": "68a6dc1a17b9ffba2a102a53",
+                "name": "nodejs"
+            }
+        ],
+        "upvotes": [],
+        "comments": [
+            {
+                "user": "68a6dad080e25d6c2f077748",
+                "text": "Great Post",
+                "_id": "68a6dc8317b9ffba2a102a59",
+                "createdAt": "2025-08-21T08:44:51.293Z"
+            }
+        ],
+
+
+deletepostbyId
+{
+    "msg": "Deleted"
+}
